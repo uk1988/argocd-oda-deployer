@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: oda-deployer
+  namespace: argocd
+spec:
+  ignoreDifferences:
+    - group: argoproj.io
+      kind: Application
+      name: oda-app
+      jsonPointers:
+        - /spec/source/targetRevision
+  project: default
+  source:
+    repoURL: https://github.com/vfiftyfive/argocd-oda-deployer.git
+    targetRevision: HEAD
+    path: apps
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
