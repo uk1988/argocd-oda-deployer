@@ -13,8 +13,10 @@ spec:
     path: clientintents
   destination:
     server: https://kubernetes.default.svc
-    namespace: shifumi
+    namespace: oda
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
