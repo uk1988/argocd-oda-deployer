@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/vfiftyfive/oda-app-policies.git
-    targetRevision: HEAD
+    targetRevision: local
     path: clientintents
   destination:
     server: https://kubernetes.default.svc
