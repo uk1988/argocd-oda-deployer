@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/vfiftyfive/oda-app-policies.git
     targetRevision: local
-    path: clientintents
+    path: "."
   destination:
     server: https://kubernetes.default.svc
     namespace: oda
