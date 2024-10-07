@@ -7,10 +7,13 @@ metadata:
     argocd.argoproj.io/sync-wave: "1"
 spec:
   project: default
-  source:
-    repoURL: https://github.com/vfiftyfive/oda-app-policies.git
-    targetRevision: local
-    path: "."
+  sources:
+    - repoURL: https://github.com/vfiftyfive/oda-app-policies.git
+      targetRevision: local
+      path: clientintents
+    - repoURL: https://github.com/vfiftyfive/oda-app-policies.git
+      targetRevision: local
+      path: game-service
   destination:
     server: https://kubernetes.default.svc
     namespace: oda
