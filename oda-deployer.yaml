@@ -12,7 +12,7 @@ spec:
         - /spec/source/targetRevision
   project: default
   source:
-    repoURL: https://github.com/${GH_USER}/argocd-oda-deployer.git
+    repoURL: https://github.com/uk1988/argocd-oda-deployer.git
     targetRevision: HEAD
     path: apps
   destination:
